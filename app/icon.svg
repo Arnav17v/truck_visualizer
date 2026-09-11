@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="76" viewBox="0 0 36 76" fill="none">
+  <g fill="#263431"><rect x="5" y="9" width="5" height="10" rx="2"/><rect x="26" y="9" width="5" height="10" rx="2"/><rect x="5" y="53" width="5" height="8" rx="2"/><rect x="26" y="53" width="5" height="8" rx="2"/><rect x="5" y="63" width="5" height="8" rx="2"/><rect x="26" y="63" width="5" height="8" rx="2"/></g>
+  <rect x="13" y="19" width="10" height="13" rx="2" fill="#46534F"/>
+  <path d="M9 7C9 4.8 10.8 3 13 3H23C25.2 3 27 4.8 27 7V23H9V7Z" fill="#D65C27" stroke="white" stroke-width="1.5"/>
+  <path d="M12 7H24L23 12H13L12 7Z" fill="#263F43"/>
+  <path d="M14 8H22" stroke="#83AEB3" stroke-width="1.2"/>
+  <rect x="12" y="15" width="12" height="5" rx="1.5" fill="#EC8552"/>
+  <path d="M7 12H4M29 12H32" stroke="#D65C27" stroke-width="2" stroke-linecap="round"/>
+  <rect x="9" y="28" width="18" height="45" rx="2.5" fill="#F5F4EF" stroke="#85918B" stroke-width="1.3"/>
+  <rect x="11" y="30" width="14" height="40" rx="1" fill="#E5E8E2"/>
+  <path d="M12 34H24M12 40H24M12 46H24M12 52H24M12 58H24M12 64H24" stroke="#C9D0C8"/>
+  <path d="M10 29H26" stroke="white" stroke-width="2"/>
+  <path d="M11 71H14M22 71H25" stroke="#CF572A" stroke-width="2"/>
+  <path d="M11 4H14M22 4H25" stroke="#FFE5AD" stroke-width="2" stroke-linecap="round"/>
+</svg>

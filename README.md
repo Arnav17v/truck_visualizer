@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Truck Route Visualizer
 
-## Getting Started
+A delivery route simulation through Noida, built with Next.js, React, Leaflet, and Anime.js.
 
-First, run the development server:
+The truck follows a cached road route through three delivery stops. Playback includes pause, resume, reset, and speed controls. The status panel shows distance covered, completed stops, and an estimated remaining time. The map supports light and dark themes.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
+## Run locally
+
+Requires Node.js 20.9+ and pnpm.
+
+```sh
+pnpm install
+cp .env.example .env.local
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000. Set `NEXT_PUBLIC_CARTO_BASEMAPS_API_KEY` in `.env.local` for CARTO tiles. Without a key, the map uses OpenStreetMap tiles.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```sh
+pnpm lint
+pnpm build
+pnpm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Route data
 
-## Learn More
+`lib/roadRoute.json` contains the OSRM driving route between the four sample locations. Stop positions are snapped to the road network, and the marker is interpolated along each leg with its heading aligned to the road.
 
-To learn more about Next.js, take a look at the following resources:
+The route covers 18.2 km. Each leg plays in ten seconds; the ETA assumes 30 km/h independently of playback speed. This is a fixed-route simulation, not live GPS tracking or truck-specific navigation. OSRM's driving profile does not account for vehicle height, weight, or truck restrictions.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Map data: OpenStreetMap contributors. Basemaps: CARTO or OpenStreetMap. Routing: OSRM.
